@@ -21,4 +21,3 @@ module.exports = {
   UPLOADS_FOLDER,
   MULTER,
 }
-
