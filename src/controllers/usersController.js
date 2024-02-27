@@ -67,7 +67,10 @@ class UsersController {
       [user.name, user.email, user.password, user.id]
     );
 
-    return response.json();   
+    return response.json({
+      ...user,
+      password: undefined,
+    });   
   }  
 }
 
