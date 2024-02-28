@@ -7,6 +7,9 @@ class UserAvatarController {
     const user_id = request.user.id;
     const avatarFilename = request.file.filename;
 
+    console.log("user_id: ", user_id)
+    console.log("avatarFilename: ", avatarFilename)
+
     const diskStorage = new DiskStorage();
 
     const user = await knex("users")
