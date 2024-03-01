@@ -6,7 +6,10 @@ class TagsController {
 
     const tags = await knex("tags")
     .where({ user_id })
-    .groupBy("name")    
+    .groupBy("name")
+    .orderByRaw("LOWER(name)")
+
+    console.log(tags)
 
     return response.json(tags);
   }
