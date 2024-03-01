@@ -9,8 +9,6 @@ class TagsController {
     .groupBy("name")
     .orderByRaw("LOWER(name)")
 
-    console.log(tags)
-
     return response.json(tags);
   }
 }
